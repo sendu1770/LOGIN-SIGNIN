@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title> JS LESSION 7</title>
+</head>
+
+    <body>
+    <script>
+        let num = prompt('Nhập phép tính');
+        let result = 0;
+
+        num = num.split('');
+        let soThuNhat = num[0];
+        let phepTinh = num[1];
+        let soThuHai = num [2];
+        
+    while(true){
+        if (phepTinh == '*') {
+            result = soThuNhat * soThuHai
+            break;   
+            }
+        else if (phepTinh == '+'){
+            result = Number(soThuNhat) + Number(soThuHai);
+            break;
+            }
+
+        else if (phepTinh == '-'){
+            result = Number(soThuNhat) - Number(soThuHai);
+            break;
+            }
+
+        else if (phepTinh == '/'){
+            result = Number(soThuNhat) / Number(soThuHai);
+            break;
+            }
+
+        else {
+            alert('Phép tính không đúng');
+            num = prompt('Hãy nhập lại phép tính');
+            soThuNhat = num[0];
+            phepTinh = num[1];
+            soThuHai = num[2];
+            }
+        }   
+
+        let resultfinal = result % 2 ==0 ? 'Kết quả là số chẵn: ': 'Kết quả là số lẻ: '
+        document.write(resultfinal + result);
+
+    let text = 'Hello World';
+    textTempT = text.split(' ');
+    console.log(textTempT);
+    </script>
+</body>
+</html>
